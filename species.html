@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bear Species - World of Bears</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Sans-serif theme -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-species">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-icon">🐻</span> World of Bears
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="species.html">Species</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header-species d-flex align-items-center">
+      <div class="container text-center">
+        <h1 class="page-title animate-fade-in">Bear Species</h1>
+        <p class="page-subtitle animate-slide-up">Explore the Diverse World of Bears</p>
+      </div>
+    </header>
+
+    <!-- Species Cards -->
+    <section class="py-5 bg-light-green">
+      <div class="container">
+        <div class="row g-4" id="species-container">
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/158109/kodiak-bear-brown-bear-alaska-nature-158109.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Brown Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">Brown Bear</h3>
+                <p class="card-scientific">Ursus arctos</p>
+                <p class="card-text">The most widely distributed bear, found across North America, Europe, and Asia. Includes grizzly bears and Kodiak bears.</p>
+                <div class="species-stats">
+                  <span class="badge bg-success me-2">Least Concern</span>
+                  <span class="badge bg-secondary">150-700 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/132957/polar-bear-arctic-bear-white-nature-132957.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Polar Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">Polar Bear</h3>
+                <p class="card-scientific">Ursus maritimus</p>
+                <p class="card-text">The largest land carnivore, perfectly adapted to Arctic life. Their white fur provides camouflage on ice and snow.</p>
+                <div class="species-stats">
+                  <span class="badge bg-warning me-2">Vulnerable</span>
+                  <span class="badge bg-secondary">350-700 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/1661576/pexels-photo-1661576.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="American Black Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">American Black Bear</h3>
+                <p class="card-scientific">Ursus americanus</p>
+                <p class="card-text">North America's most common bear. Highly adaptable, found in forests from Canada to Mexico.</p>
+                <div class="species-stats">
+                  <span class="badge bg-success me-2">Least Concern</span>
+                  <span class="badge bg-secondary">40-250 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/12867454/pexels-photo-12867454.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Asian Black Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">Asian Black Bear</h3>
+                <p class="card-scientific">Ursus thibetanus</p>
+                <p class="card-text">Known for the distinctive white V-shaped marking on their chest. Excellent climbers found in Asian forests.</p>
+                <div class="species-stats">
+                  <span class="badge bg-warning me-2">Vulnerable</span>
+                  <span class="badge bg-secondary">40-200 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Giant Panda">
+              <div class="card-body">
+                <h3 class="card-title-species">Giant Panda</h3>
+                <p class="card-scientific">Ailuropoda melanoleuca</p>
+                <p class="card-text">China's beloved icon. Despite being a bear, they have a diet of 99% bamboo. Conservation success story.</p>
+                <div class="species-stats">
+                  <span class="badge bg-success me-2">Vulnerable</span>
+                  <span class="badge bg-secondary">70-125 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/32916/bear-sun-bear-animal-malaysia.jpg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Sun Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">Sun Bear</h3>
+                <p class="card-scientific">Helarctos malayanus</p>
+                <p class="card-text">The smallest bear species with a distinctive golden crescent on their chest. Native to Southeast Asian rainforests.</p>
+                <div class="species-stats">
+                  <span class="badge bg-danger me-2">Vulnerable</span>
+                  <span class="badge bg-secondary">25-65 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/3760840/pexels-photo-3760840.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Sloth Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">Sloth Bear</h3>
+                <p class="card-scientific">Melursus ursinus</p>
+                <p class="card-text">Named for their slow movements. Specialized for eating insects with long, curved claws and a flexible snout.</p>
+                <div class="species-stats">
+                  <span class="badge bg-warning me-2">Vulnerable</span>
+                  <span class="badge bg-secondary">55-140 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card species-card h-100">
+              <img src="https://images.pexels.com/photos/1661576/pexels-photo-1661576.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Spectacled Bear">
+              <div class="card-body">
+                <h3 class="card-title-species">Spectacled Bear</h3>
+                <p class="card-scientific">Tremarctos ornatus</p>
+                <p class="card-text">South America's only bear, named for distinctive facial markings. Live in Andean cloud forests.</p>
+                <div class="species-stats">
+                  <span class="badge bg-warning me-2">Vulnerable</span>
+                  <span class="badge bg-secondary">35-200 kg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="py-5 bg-green-dark text-white">
+      <div class="container">
+        <h2 class="text-center mb-5">Species Quick Facts</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="fact-box">
+              <h4>Largest</h4>
+              <p>Polar bears are the largest, with males weighing up to 700 kg (1,500 lbs).</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="fact-box">
+              <h4>Smallest</h4>
+              <p>Sun bears are the smallest at just 25-65 kg, about the size of a large dog.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="fact-box">
+              <h4>Fastest</h4>
+              <p>Despite their size, bears can run up to 35 mph (56 km/h).</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="fact-box">
+              <h4>Strongest</h4>
+              <p>A brown bear's bite is 2,500 psi, stronger than a tiger or lion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-green-darker text-white text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2024 World of Bears. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

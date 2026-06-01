@@ -1,0 +1,705 @@
+/* ============================================
+   WORLD OF BEARS - COMPREHENSIVE STYLESHEET
+   ============================================ */
+
+/* ============================================
+   GLOBAL STYLES & VARIABLES
+   ============================================ */
+
+:root {
+  /* Brown Theme Colors Home Page */
+  --brown-primary: #8B4513;
+  --brown-dark: #5C2E0A;
+  --brown-darker: #3B1F0A;
+  --brown-light: #D2B48C;
+  --brown-lighter: #F5DEB3;
+
+  /* Green Theme Colors Species Page */
+  --green-primary: #2E7D32;
+  --green-dark: #1B5E20;
+  --green-darker: #0D3E12;
+  --green-light: #81C784;
+  --green-lighter: #C8E6C9;
+
+   /*Blue Theme Colors Gallery Page */ 
+  --blue-primary: #1976D2;
+  --blue-dark: #0D47A1;
+  --blue-darker: #072A6E;
+  --blue-light: #64B5F6;
+  --blue-lighter: #BBDEFB;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   PAGE-SPECIFIC THEMES
+   ============================================ */
+
+ /*HOME PAGE - Brown Theme with Serif Fonts */ 
+.page-home {
+  font-family: 'Merriweather', Georgia, serif;
+  background:background: linear-gradient(135deg, var(--brown-lighter) 0%, var(--brown-light) 100%); 
+  min-height: 100vh;
+}
+
+.page-home h1,
+.page-home h2,
+.page-home h3,
+.page-home h4,
+.page-home h5 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.page-home .navbar-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.bg-brown {
+  background: linear-gradient(135deg, var(--brown-primary) 0%, var(--brown-dark) 100%) !important;
+}
+
+.bg-brown-dark {
+  background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-darker) 100%) !important;
+}
+
+.bg-brown-darker {
+  background-color: var(--brown-darker) !important;
+}
+
+.bg-light-brown {
+  background-color: var(--brown-lighter);
+}
+
+ /*SPECIES PAGE - Green Theme with Sans-Serif Fonts */ 
+.page-species {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--green-lighter) 0%, var(--green-light) 100%);
+  min-height: 100vh;
+}
+
+.page-species h1,
+.page-species h2,
+.page-species h3,
+.page-species h4,
+.page-species h5 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+}
+
+.page-species .navbar-brand {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.bg-green {
+  background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 100%) !important;
+}
+
+.bg-green-dark {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-darker) 100%) !important;
+}
+
+.bg-green-darker {
+  background-color: var(--green-darker) !important;
+}
+
+.bg-light-green {
+  background-color: var(--green-lighter);
+}
+
+/*GALLERY PAGE - Blue Theme with Decorative Fonts */ 
+.page-gallery {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: linear-gradient(135deg, var(--blue-lighter) 0%, var(--blue-light) 100%);
+  min-height: 100vh;
+}
+
+.page-gallery h1,
+.page-gallery h2,
+.page-gallery h3,
+.page-gallery h4,
+.page-gallery h5 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.page-gallery .navbar-brand {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.bg-blue {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 100%) !important;
+}
+
+.bg-blue-dark {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-darker) 100%) !important;
+}
+
+.bg-blue-darker {
+  background-color: var(--blue-darker) !important;
+}
+
+.bg-light-blue {
+  background-color: var(--blue-lighter);
+}
+
+/*============================================
+   NAVIGATION
+   ============================================*/ 
+
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .brand-icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.nav-link {
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.nav-link.active {
+  background: rgba(255,255,255,0.2);
+}
+
+ /*============================================
+   HERO SECTION
+   ============================================*/ 
+
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--brown-primary) 0%, var(--brown-dark) 50%, var(--brown-darker) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.pexels.com/photos/158109/kodiak-bear-brown-bear-alaska-nature-158109.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+  opacity: 0.15;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--brown-lighter);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+ /*============================================
+   PAGE HEADERS
+   ============================================*/
+
+.page-header-species {
+  min-height: 50vh;
+  background: linear-gradient(135deg, var(--green-primary) 0%, var(--green-dark) 50%, var(--green-darker) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-species::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+  opacity: 0.1;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  color: var(--green-light);
+}
+
+.page-header-gallery {
+  min-height: 50vh;
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 50%, var(--blue-darker) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.pexels.com/photos/132957/polar-bear-arctic-bear-white-nature-132957.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+  opacity: 0.12;
+}
+
+.gallery-title {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  letter-spacing: 0.05em;
+}
+
+.gallery-subtitle {
+  font-size: 1.3rem;
+  color: var(--blue-light);
+}
+
+ /*============================================
+   BUTTONS
+   ============================================*/ 
+
+.btn-hero {
+  background: white;
+  color: var(--brown-primary);
+  border: none;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-hero:hover {
+  background: var(--brown-light);
+  color: var(--brown-darker);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-brown {
+  background: var(--brown-primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-brown:hover {
+  background: var(--brown-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: var(--blue-dark);
+}
+
+ /*============================================
+   CARDS
+   ============================================*/ 
+
+.feature-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Species Cards */
+.species-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.species-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.species-card img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.species-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-title-species {
+  color: var(--green-dark);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.card-scientific {
+  color: var(--green-primary);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.species-stats {
+  margin-top: 1rem;
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 2rem 1rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+  margin-bottom: 0.25rem;
+}
+
+.gallery-overlay p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+ /*============================================
+   STATISTICS
+   ============================================*/
+
+.stat-item {
+  padding: 2rem 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, var(--blue-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-species .stat-number {
+  background: linear-gradient(135deg, #fff 0%, var(--green-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+ /*============================================
+   FACT BOXES
+   ============================================*/ 
+
+.fact-box {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--green-light);
+  transition: all 0.3s ease;
+}
+
+.fact-box:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(10px);
+}
+
+.fact-box h4 {
+  color: var(--green-light);
+  margin-bottom: 0.5rem;
+}
+
+ /*============================================
+   SECTIONS
+   ============================================*/
+
+.section-title {
+  color: var(--brown-dark);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--brown-primary);
+  border-radius: 2px;
+}
+
+.section-title-light {
+  color: white;
+}
+
+ /*============================================
+   ANIMATIONS
+   ============================================*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+  opacity: 0;
+}
+
+ /*============================================
+   FOOTER
+   ============================================*/
+
+footer {
+  font-size: 0.95rem;
+}
+
+ /*============================================
+   RESPONSIVE DESIGN
+   ============================================*/
+
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .page-title,
+  .gallery-title {
+    font-size: 2.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .navbar-collapse {
+    background: rgba(0,0,0,0.9);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    min-height: 80vh;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+
+  .gallery-item img {
+    height: 220px;
+  }
+
+  .stat-item {
+    padding: 1rem 0.5rem;
+  }
+
+  .col-6 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .page-title,
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .btn-hero {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+ /*============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.shadow-lg-custom {
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
